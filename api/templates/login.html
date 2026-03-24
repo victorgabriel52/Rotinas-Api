@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faça sua Rotina agora mesmo</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/login.css')}}">
 </head>
 <body>
     <!--Parte superior do site-->
@@ -21,18 +22,37 @@
         </section>
 
         <!--Aqui vou criar a box de login-->
-        <section>
+        <section class="box-login">
             <h1>Login</h1>
             <form >
                 <label for="email">Email:</label>
-                <input type="email" name="email" placeholder="Ex: joão@gmail.com"> <br>
+                <input type="email" name="email" placeholder="Ex: joão@gmail.com" required> <br>
                 <label for="password">Senha:</label>
-                <input type="password" name="password" placeholder="EX: joao_2026"> <br>
+                <input type="password" name="password" placeholder="EX: joao_2026" required> <br>
                 <button type="submit">Login</button>
             </form>
-
         </section>
+
+        <section class="box-cadastro">
+            <h1>Cadaste-se</h1>
+            <form >
+                <label for="name">Nome:</label>
+                <input type="nome" name="name" placeholder="Ex: João"> <br>
+                <label >Email:</label>
+                <input type="email" name="email" placeholder="Ex: Joao@gmail.com"> <br>
+                <label >Senha:</label>
+                <input type="password" name="password" placeholder="Joao_2026">
+                <button type="submit">Cadastro</button>
+            </form>
+        </section>
+
+        <figure>
+            <img src="static/img/foto.png" alt="">
+        </figure>
     </main>
-    
+    <footer>
+        <p>Gostou dessa api? se sim me siga nas redes socias</p>
+        <p>@victorgbriell._</p>
+    </footer>
 </body>
 </html>
