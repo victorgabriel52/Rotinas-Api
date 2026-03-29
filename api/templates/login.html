@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faça sua Rotina agora mesmo</title>
     <link rel="stylesheet" href="{{url_for('static', filename='css/login.css')}}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
 <body>
     <!--Parte superior do site-->
@@ -25,31 +26,39 @@
         <div class="container-boxes">
             <section class="box-login">
                 <h1>Login</h1>
-                <form >
+                <form id="cadastroForm1" action="/" method="POST" >
+
+                    <input type="hidden" name="tipo" value="login">
+
                     <label for="email">Email:</label>
                     <input type="email" name="email" placeholder="Ex: joão@gmail.com" required> <br>
                     <label for="password">Senha:</label>
                     <input type="password" name="password" placeholder="EX: joao_2026" required> <br>
+                    <div id="senhaError1" class="error" style="display: none; color: red;">A senha deve ter pelo menos 8 caracteres!</div>
                     <button type="submit">Login</button>
                 </form>
             </section>
     
             <section class="box-cadastro">
                 <h1>Cadaste-se</h1>
-                <form >
+                <form id="cadastroForm2" action="/" method="POST">
+
+                    <input type="hidden" name="tipo" value="cadastro">
+
                     <label for="name">Nome:</label>
-                    <input type="name" name="name" placeholder="Ex: João"> <br>
+                    <input type="name" name="nome" placeholder="Ex: João"> <br>
                     <label >Email:</label>
                     <input type="email" name="email" placeholder="Ex: Joao@gmail.com"> <br>
                     <label >Senha:</label>
                     <input type="password" name="password" placeholder="Joao_2026">
+                    <div id="senhaError2" class="error" style="display: none; color: red;">A senha deve ter pelo menos 8 caracteres!</div>
                     <button type="submit">Cadastro</button>
                 </form>
             </section>
         </div>
 
         <figure>
-            <img src="static/img/foto.png" alt="">
+            <img src="static/img/foto1.png" alt="">
         </figure>
     </main>
     <footer>
