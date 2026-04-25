@@ -3,19 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/rotinas.css') }}">
     <title>Essa é a parte de Rotinas</title>
 </head>
 <body>
-    <header>
-        <h1>Minhas rotinas diárias</h1>
-    </header>
-    <main>
+
+<header>
+    <h1>Minhas rotinas diárias</h1>
+</header>
+
+<main>
+    <div class="box-rotinas">
+
         <section>
-            <form action="">
-                
+
+            <!-- FORM -->
+            <form action="/rotinas" method="POST">
+                <h1 class="titulo-lista">Lista de Rotinas</h1>
+
+                <label class="label-rotinas">Adicionar nova rotina:</label>
+
+                <input type="text" name="rotina" placeholder="Ex: Treinar" required>
+
+                <button type="submit" class="botao-adicionar">
+                    Adicionar
+                </button>
             </form>
+
+            <!-- LISTA -->
+            <div class="lista-rotinas">
+                <h1>Rotinas:</h1>
+
+                <ul>
+                    {% for r in rotinas %}
+                        <li class="item-rotina">
+
+                            <!-- checkbox -->
+                            <input type="checkbox">
+
+                            <!-- texto -->
+                            <span>{{ r.rotina }}</span>
+
+                            <!-- ações -->
+                            <div class="acoes">
+                                <form action="/deletar/{{ r.id }}" method="POST">
+                                    <button type="submit">🗑️</button>
+                                </form>
+                            </div>
+
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
         </section>
-    </main>
-    
+
+    </div>
+        <!-- IMAGEM -->
+        <figure>
+            <img src="{{ url_for('static', filename='img/foto1.png') }}" alt="">
+        </figure>
+
+</main>
+
 </body>
 </html>

@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: pink;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    font-size: 25px;
+    color: pink;
+    -webkit-text-stroke: 0.06rem black;
+    background-color: #C08081 ;
+    padding: 2rem;
+    border: none;
+    box-shadow: 10px 0 25px rgba(0, 0, 0, 0.4);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem;
+}
+
+.box-rotinas {
+    display: flex;
+    flex-direction: column; /* empilha as rotinas */
+    align-items: center;
+    gap: 4rem;
+    margin-top: 4rem;
+
+    max-height: 30rem;   /* controla altura da caixa */
+    overflow-y: auto;    /* scroll vertical */
+    overflow-x: hidden;
+}
+
+.box-rotinas::-webkit-scrollbar {
+    width: 8px;
+}
+
+.box-rotinas::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* BOX PRINCIPAL */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 3rem;
+    border: 0.2rem solid #C08081;
+    border-radius: 1.5rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    width: 30rem;
+}
+
+.titulo-lista{
+    text-align: center;
+    color: #a65d5f;
+}
+
+/* LABEL */
+.label-rotinas {
+    font-size: 1.2rem;
+    color: #C08081;
+    margin-bottom: 1rem;
+}
+
+/* INPUT */
+input[type="text"] {
+    border: 0.15rem solid #C08081;
+    border-radius: 0.8rem;
+    background-color: #ffe4ec;
+    padding: 0.8rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #a65d5f;
+    box-shadow: 0 0 0.5rem rgba(192, 128, 129, 0.5);
+}
+
+/* BOTÃO */
+.botao-adicionar {
+    border-radius: 1rem;
+    padding: 0.7rem;
+    font-size: 1rem;
+    background-color: #C08081;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.botao-adicionar:hover {
+    background-color: #a65d5f;
+    transform: scale(1.03);
+}
+
+/* LISTA */
+.lista-rotinas {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.lista-rotinas h1 {
+    font-size: 1.4rem;
+    color: #C08081;
+    margin-bottom: 1rem;
+}
+
+/* ITEM */
+.item-rotina {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff0f5;
+    border: 0.1rem solid #C08081;
+    border-radius: 1rem;
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+    transition: 0.2s;
+}
+
+.item-rotina:hover {
+    transform: scale(1.02);
+}
+
+/* TEXTO */
+.item-rotina span {
+    flex: 1;
+    margin-left: 0.8rem;
+    color: #333;
+}
+
+/* AÇÕES */
+.acoes {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.acoes button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.2s;
+}
+
+.acoes button:hover {
+    transform: scale(1.2);
+}
+
+figure {
+    margin-left: 0;
+}
+
+img {
+    position: fixed;
+    right: 0.01rem;
+    bottom: 0.01rem;
+}
+
+

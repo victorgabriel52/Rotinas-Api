@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('cadastroForm2');
     const senhaError = document.getElementById('senhaError2');
     form.addEventListener('submit', function(event) {
-        const senha = document.querySelector('input[name="password"]').value;
+        const senha = form.querySelector('input[name="password"]').value;
         if (senha.length < 8) {
             event.preventDefault();
             senhaError.style.display = 'block';
